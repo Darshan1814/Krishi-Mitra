@@ -1,0 +1,49 @@
+{
+  "teams": [
+    {
+      "id": 1,
+      "name": "v",
+      "city": "pune",
+      "state": "Maharashtra",
+      "members": [
+        "Rohan Jankar",
+        "Darshan Patil",
+        "Ved",
+        "arya"
+      ],
+      "orders": [
+        {
+          "id": 1,
+          "product_id": 2,
+          "quantity": 21,
+          "farmer": "Rohan Jankar"
+        },
+        {
+          "id": 2,
+          "product_id": 3,
+          "quantity": 3,
+          "farmer": "Ved",
+          "status": "pending"
+        },
+        {
+          "id": 3,
+          "product_id": 4,
+          "quantity": 45,
+          "farmer": "arya",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Agri",
+      "city": "jalgaon",
+      "state": "Maharashtra",
+      "members": [
+        "Atharava pata"
+      ],
+      "orders": []
+    }
+  ],
+  "products": []
+}
