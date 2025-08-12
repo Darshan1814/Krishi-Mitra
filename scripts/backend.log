@@ -1,0 +1,214 @@
+
+> backend@1.0.0 dev
+> nodemon server.js
+
+[33m[nodemon] 3.1.10[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+[32m[nodemon] starting `node server.js`[39m
+[dotenv@17.2.0] injecting env (10) from .env (tip: ⚙️  write to custom object with { processEnv: myObject })
+[1m[33mServer running in development mode on port 5001[39m[22m
+[4m[36mMongoDB Connected: localhost[39m[24m
+[0mGET /health [32m200[0m 1.475 ms - 45[0m
+[0mGET /api/weather/current?lat=21.023160899996824&lon=75.56664091910632 [32m200[0m 392.185 ms - 396[0m
+[0mGET /api/weather/current?lat=21.023160899996824&lon=75.56664091910632 [32m200[0m 67.886 ms - 396[0m
+[0mGET /api/weather/forecast?lat=21.023160899996824&lon=75.56664091910632 [32m200[0m 226.366 ms - 881[0m
+[0mGET /api/weather/forecast?lat=21.023160899996824&lon=75.56664091910632 [36m304[0m 53.571 ms - -[0m
+[0mGET /api/weather/current?lat=21.023160899996824&lon=75.56664091910632 [32m200[0m 84.543 ms - 396[0m
+[0mGET /api/weather/forecast?lat=21.023160899996824&lon=75.56664091910632 [36m304[0m 113.731 ms - -[0m
+[0mGET /api/weather/current?lat=21.023160899996824&lon=75.56664091910632 [32m200[0m 75.614 ms - 396[0m
+[0mGET /api/weather/forecast?lat=21.023160899996824&lon=75.56664091910632 [36m304[0m 105.924 ms - -[0m
+[0mGET /api/weather/current?lat=18.515669&lon=73.856285 [32m200[0m 82.320 ms - 394[0m
+[0mGET /api/weather/forecast?lat=18.515669&lon=73.856285 [32m200[0m 157.505 ms - 878[0m
+Gemini API Error: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent: [404 Not Found] models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+    at handleResponseNotOk (/Users/darshanpatil/Documents/Mern Stack/krishiBandhu/backend/node_modules/@google/generative-ai/dist/index.js:434:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async makeRequest (/Users/darshanpatil/Documents/Mern Stack/krishiBandhu/backend/node_modules/@google/generative-ai/dist/index.js:403:9)
+    at async generateContent (/Users/darshanpatil/Documents/Mern Stack/krishiBandhu/backend/node_modules/@google/generative-ai/dist/index.js:867:22)
+    at async /Users/darshanpatil/Documents/Mern Stack/krishiBandhu/backend/routes/chat.js:26:20 {
+  status: 404,
+  statusText: 'Not Found',
+  errorDetails: undefined
+}
+[0mPOST /api/chat [31m500[0m 2042.525 ms - 58[0m
+Gemini API Error: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent: [404 Not Found] models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+    at handleResponseNotOk (/Users/darshanpatil/Documents/Mern Stack/krishiBandhu/backend/node_modules/@google/generative-ai/dist/index.js:434:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async makeRequest (/Users/darshanpatil/Documents/Mern Stack/krishiBandhu/backend/node_modules/@google/generative-ai/dist/index.js:403:9)
+    at async generateContent (/Users/darshanpatil/Documents/Mern Stack/krishiBandhu/backend/node_modules/@google/generative-ai/dist/index.js:867:22)
+    at async /Users/darshanpatil/Documents/Mern Stack/krishiBandhu/backend/routes/chat.js:26:20 {
+  status: 404,
+  statusText: 'Not Found',
+  errorDetails: undefined
+}
+[0mPOST /api/chat [31m500[0m 2077.868 ms - 58[0m
+[0mGET /api/weather/current?lat=21.023155214113242&lon=75.56629205237505 [32m200[0m 202.013 ms - 396[0m
+[0mGET /api/weather/current?lat=21.023155214113242&lon=75.56629205237505 [32m200[0m 65.398 ms - 396[0m
+[0mGET /api/weather/forecast?lat=21.023155214113242&lon=75.56629205237505 [32m200[0m 282.002 ms - 881[0m
+[0mGET /api/weather/forecast?lat=21.023155214113242&lon=75.56629205237505 [36m304[0m 66.477 ms - -[0m
+[0mPOST /api/auth/login [33m401[0m 6.915 ms - 49[0m
+[0mPOST /api/auth/register [33m400[0m 3.575 ms - 248[0m
+[0mGET /health [32m200[0m 0.177 ms - 45[0m
+[0mPOST /api/auth/register [32m201[0m 76.755 ms - 441[0m
+[0mPOST /api/auth/register [32m201[0m 65.521 ms - 441[0m
+[0mPOST /api/auth/login [32m200[0m 69.727 ms - 476[0m
+[0mPOST /api/auth/register [33m400[0m 0.379 ms - 187[0m
+[0mPOST /api/auth/register [33m400[0m 0.667 ms - 187[0m
+[0mPOST /api/auth/register [33m400[0m 0.706 ms - 187[0m
+[0mPOST /api/auth/register [33m400[0m 1.266 ms - 187[0m
+[0mPOST /api/auth/register [33m400[0m 0.482 ms - 187[0m
+[0mGET /api/weather/current?lat=21.023155210000745&lon=75.56629180004627 [32m200[0m 229.773 ms - 397[0m
+[0mGET /api/weather/current?lat=21.023155210000745&lon=75.56629180004627 [32m200[0m 56.148 ms - 397[0m
+[0mGET /api/weather/forecast?lat=21.023155210000745&lon=75.56629180004627 [32m200[0m 252.217 ms - 881[0m
+[0mGET /api/weather/forecast?lat=21.023155210000745&lon=75.56629180004627 [36m304[0m 67.518 ms - -[0m
+[0mGET /api/weather/current?lat=21.023155210000745&lon=75.56629180004627 [32m200[0m 93.347 ms - 397[0m
+[0mGET /api/weather/forecast?lat=21.023155210000745&lon=75.56629180004627 [36m304[0m 123.361 ms - -[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+[dotenv@17.2.0] injecting env (10) from .env (tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' })
+(node:6145) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:6145) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+[1m[33mServer running in development mode on port 5001[39m[22m
+[4m[36mMongoDB Connected: localhost[39m[24m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+[dotenv@17.2.0] injecting env (10) from .env (tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit)
+(node:6557) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:6557) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+[1m[33mServer running in development mode on port 5001[39m[22m
+[4m[36mMongoDB Connected: localhost[39m[24m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+[dotenv@17.2.0] injecting env (10) from .env (tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' })
+(node:7058) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:7058) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+[1m[33mServer running in development mode on port 5001[39m[22m
+[4m[36mMongoDB Connected: localhost[39m[24m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+[dotenv@17.2.0] injecting env (10) from .env (tip: ⚙️  enable debug logging with { debug: true })
+(node:7119) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:7119) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+[1m[33mServer running in development mode on port 5001[39m[22m
+[4m[36mMongoDB Connected: localhost[39m[24m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+[dotenv@17.2.0] injecting env (10) from .env (tip: ⚙️  write to custom object with { processEnv: myObject })
+(node:7178) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:7178) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+[1m[33mServer running in development mode on port 5001[39m[22m
+[4m[36mMongoDB Connected: localhost[39m[24m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+[dotenv@17.2.0] injecting env (10) from .env (tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' })
+(node:7419) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:7419) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+[1m[33mServer running in development mode on port 5001[39m[22m
+[4m[36mMongoDB Connected: localhost[39m[24m
+[1m[32mDatabase connection established successfully[39m[22m
+[0mPOST /api/auth/register [32m201[0m 86.513 ms - 452[0m
+[0mPOST /api/auth/login [32m200[0m 95.512 ms - 526[0m
+[0mPOST /api/auth/login [32m200[0m 94.405 ms - 526[0m
+[0mPOST /api/auth/register [33m400[0m 5.853 ms - 73[0m
+[0mPOST /api/auth/register [33m400[0m 6.158 ms - 72[0m
+[0mPOST /api/auth/register [32m201[0m 93.198 ms - 448[0m
+[0mPOST /api/auth/login [32m200[0m 92.769 ms - 522[0m
+[0mGET /api/weather/current?lat=21.023155215337354&lon=75.56629212748254 [32m200[0m 363.949 ms - 397[0m
+[0mGET /api/weather/current?lat=21.023155215337354&lon=75.56629212748254 [32m200[0m 60.312 ms - 397[0m
+[0mGET /api/weather/forecast?lat=21.023155215337354&lon=75.56629212748254 [32m200[0m 249.160 ms - 881[0m
+[0mGET /api/weather/forecast?lat=21.023155215337354&lon=75.56629212748254 [36m304[0m 79.480 ms - -[0m
+[0mGET /api/weather/current?lat=21.023155215337354&lon=75.56629212748254 [32m200[0m 1582.748 ms - 397[0m
+[0mGET /api/weather/current?lat=21.023155215337354&lon=75.56629212748254 [32m200[0m 152.631 ms - 397[0m
+[0mGET /api/weather/forecast?lat=21.023155215337354&lon=75.56629212748254 [36m304[0m 254.881 ms - -[0m
+[0mGET /api/weather/forecast?lat=21.023155215337354&lon=75.56629212748254 [36m304[0m 49.150 ms - -[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+[dotenv@17.2.0] injecting env (10) from .env (tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit)
+(node:8397) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:8397) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+[1m[33mServer running in development mode on port 5001[39m[22m
+[4m[36mMongoDB Connected: localhost[39m[24m
+[1m[32mDatabase connection established successfully[39m[22m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+[dotenv@17.2.0] injecting env (10) from .env (tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' })
+(node:8457) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:8457) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+[1m[33mServer running in development mode on port 5001[39m[22m
+[4m[36mMongoDB Connected: localhost[39m[24m
+[1m[32mDatabase connection established successfully[39m[22m
+StrictPopulateError: Cannot populate path `wallet.transactions` because it is not in your schema. Set the `strictPopulate` option to false to override.
+    at getModelsMapForPopulate (/Users/darshanpatil/Documents/Mern Stack/krishiBandhu/backend/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:50:12)
+    at _populatePath (/Users/darshanpatil/Documents/Mern Stack/krishiBandhu/backend/node_modules/mongoose/lib/model.js:4469:21)
+    at Function.populate (/Users/darshanpatil/Documents/Mern Stack/krishiBandhu/backend/node_modules/mongoose/lib/model.js:4436:21)
+    at /Users/darshanpatil/Documents/Mern Stack/krishiBandhu/backend/node_modules/mongoose/lib/query.js:2631:11
+    at _init (/Users/darshanpatil/Documents/Mern Stack/krishiBandhu/backend/node_modules/mongoose/lib/query.js:3307:5)
+    at Document.init (/Users/darshanpatil/Documents/Mern Stack/krishiBandhu/backend/node_modules/mongoose/lib/document.js:654:5)
+    at Document.$init (/Users/darshanpatil/Documents/Mern Stack/krishiBandhu/backend/node_modules/mongoose/lib/document.js:667:42)
+    at Object.createModelAndInit (/Users/darshanpatil/Documents/Mern Stack/krishiBandhu/backend/node_modules/mongoose/lib/queryHelpers.js:119:12)
+    at completeOne (/Users/darshanpatil/Documents/Mern Stack/krishiBandhu/backend/node_modules/mongoose/lib/query.js:3285:11)
+    at Query._completeOne (/Users/darshanpatil/Documents/Mern Stack/krishiBandhu/backend/node_modules/mongoose/lib/query.js:2627:3) {
+  path: 'wallet.transactions'
+}
+[0mGET /api/auth/me [31m500[0m 23.124 ms - 42[0m
+StrictPopulateError: Cannot populate path `wallet.transactions` because it is not in your schema. Set the `strictPopulate` option to false to override.
+    at getModelsMapForPopulate (/Users/darshanpatil/Documents/Mern Stack/krishiBandhu/backend/node_modules/mongoose/lib/helpers/populate/getModelsMapForPopulate.js:50:12)
+    at _populatePath (/Users/darshanpatil/Documents/Mern Stack/krishiBandhu/backend/node_modules/mongoose/lib/model.js:4469:21)
+    at Function.populate (/Users/darshanpatil/Documents/Mern Stack/krishiBandhu/backend/node_modules/mongoose/lib/model.js:4436:21)
+    at /Users/darshanpatil/Documents/Mern Stack/krishiBandhu/backend/node_modules/mongoose/lib/query.js:2631:11
+    at _init (/Users/darshanpatil/Documents/Mern Stack/krishiBandhu/backend/node_modules/mongoose/lib/query.js:3307:5)
+    at Document.init (/Users/darshanpatil/Documents/Mern Stack/krishiBandhu/backend/node_modules/mongoose/lib/document.js:654:5)
+    at Document.$init (/Users/darshanpatil/Documents/Mern Stack/krishiBandhu/backend/node_modules/mongoose/lib/document.js:667:42)
+    at Object.createModelAndInit (/Users/darshanpatil/Documents/Mern Stack/krishiBandhu/backend/node_modules/mongoose/lib/queryHelpers.js:119:12)
+    at completeOne (/Users/darshanpatil/Documents/Mern Stack/krishiBandhu/backend/node_modules/mongoose/lib/query.js:3285:11)
+    at Query._completeOne (/Users/darshanpatil/Documents/Mern Stack/krishiBandhu/backend/node_modules/mongoose/lib/query.js:2627:3) {
+  path: 'wallet.transactions'
+}
+[0mGET /api/auth/me [31m500[0m 3.674 ms - 42[0m
+Gemini API Error: GoogleGenerativeAIFetchError: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent: [404 Not Found] models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+    at handleResponseNotOk (/Users/darshanpatil/Documents/Mern Stack/krishiBandhu/backend/node_modules/@google/generative-ai/dist/index.js:434:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async makeRequest (/Users/darshanpatil/Documents/Mern Stack/krishiBandhu/backend/node_modules/@google/generative-ai/dist/index.js:403:9)
+    at async generateContent (/Users/darshanpatil/Documents/Mern Stack/krishiBandhu/backend/node_modules/@google/generative-ai/dist/index.js:867:22)
+    at async /Users/darshanpatil/Documents/Mern Stack/krishiBandhu/backend/routes/chat.js:26:20 {
+  status: 404,
+  statusText: 'Not Found',
+  errorDetails: undefined
+}
+[0mPOST /api/chat [31m500[0m 2128.315 ms - 58[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+[dotenv@17.2.0] injecting env (10) from .env (tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`)
+(node:9572) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:9572) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+[1m[33mServer running in development mode on port 5001[39m[22m
+[4m[36mMongoDB Connected: localhost[39m[24m
+[1m[32mDatabase connection established successfully[39m[22m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+[dotenv@17.2.0] injecting env (10) from .env (tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild)
+(node:9646) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:9646) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+[1m[33mServer running in development mode on port 5001[39m[22m
+[4m[36mMongoDB Connected: localhost[39m[24m
+[1m[32mDatabase connection established successfully[39m[22m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+[dotenv@17.2.0] injecting env (10) from .env (tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit)
+(node:9704) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:9704) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+[1m[33mServer running in development mode on port 5001[39m[22m
+[4m[36mMongoDB Connected: localhost[39m[24m
+[1m[32mDatabase connection established successfully[39m[22m

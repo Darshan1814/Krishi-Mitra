@@ -1,0 +1,50 @@
+/Users/darshanpatil/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.137.88:5002
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+/Users/darshanpatil/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 315-607-085
+127.0.0.1 - - [29/Jul/2025 19:56:40] "[33mPOST /api/chat HTTP/1.1[0m" 404 -
+127.0.0.1 - - [29/Jul/2025 19:56:52] "[33mOPTIONS /api/chat HTTP/1.1[0m" 404 -
+127.0.0.1 - - [29/Jul/2025 19:57:18] "[33mPOST /api/chat HTTP/1.1[0m" 404 -
+127.0.0.1 - - [29/Jul/2025 19:57:26] "[33mGET / HTTP/1.1[0m" 404 -
+127.0.0.1 - - [29/Jul/2025 19:57:48] "POST /api/disease-detection HTTP/1.1" 200 -
+127.0.0.1 - - [29/Jul/2025 19:57:58] "[33mPOST /api/api/disease-detection HTTP/1.1[0m" 404 -
+127.0.0.1 - - [29/Jul/2025 19:57:58] "[33mPOST /api/api/disease-detection HTTP/1.1[0m" 404 -
+127.0.0.1 - - [29/Jul/2025 19:57:58] "[33mPOST /api/api/disease-detection HTTP/1.1[0m" 404 -
+127.0.0.1 - - [29/Jul/2025 19:57:59] "[33mPOST /api/api/disease-detection HTTP/1.1[0m" 404 -
+127.0.0.1 - - [29/Jul/2025 19:57:59] "[33mPOST /api/api/disease-detection HTTP/1.1[0m" 404 -
+127.0.0.1 - - [29/Jul/2025 19:57:59] "[33mPOST /api/api/disease-detection HTTP/1.1[0m" 404 -
+127.0.0.1 - - [29/Jul/2025 19:57:59] "[33mPOST /api/api/disease-detection HTTP/1.1[0m" 404 -
+127.0.0.1 - - [29/Jul/2025 19:59:10] "POST /api/disease-detection HTTP/1.1" 200 -
+ * Detected change in '/Users/darshanpatil/Documents/Mern Stack/krishiBandhu/ml-features/app.py', reloading
+ * Restarting with stat
+/Users/darshanpatil/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 315-607-085
+127.0.0.1 - - [29/Jul/2025 19:59:45] "POST /api/disease-detection HTTP/1.1" 200 -
+127.0.0.1 - - [29/Jul/2025 19:59:57] "[33mPOST /api/api/disease-detection HTTP/1.1[0m" 404 -
+127.0.0.1 - - [29/Jul/2025 19:59:58] "[33mPOST /api/api/disease-detection HTTP/1.1[0m" 404 -
+127.0.0.1 - - [29/Jul/2025 19:59:58] "[33mPOST /api/api/disease-detection HTTP/1.1[0m" 404 -
+127.0.0.1 - - [29/Jul/2025 19:59:58] "[33mPOST /api/api/disease-detection HTTP/1.1[0m" 404 -
+127.0.0.1 - - [29/Jul/2025 19:59:58] "[33mPOST /api/api/disease-detection HTTP/1.1[0m" 404 -
+127.0.0.1 - - [29/Jul/2025 19:59:59] "[33mPOST /api/api/disease-detection HTTP/1.1[0m" 404 -
+127.0.0.1 - - [29/Jul/2025 19:59:59] "[33mPOST /api/api/disease-detection HTTP/1.1[0m" 404 -
+127.0.0.1 - - [29/Jul/2025 20:00:23] "[33mPOST /api/api/disease-detection HTTP/1.1[0m" 404 -
+ * Detected change in '/Users/darshanpatil/Documents/Mern Stack/krishiBandhu/ml-features/app.py', reloading
+ * Restarting with stat
+/Users/darshanpatil/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 315-607-085
+/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
