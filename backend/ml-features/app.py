@@ -3,14 +3,17 @@ from flask_cors import CORS
 import requests
 import json
 import base64
-from playwright.sync_api import sync_playwright
-from bs4 import BeautifulSoup
+import os
 
 app = Flask(__name__)
-CORS(app, origins=['http://localhost:3000', 'http://localhost:3001'], supports_credentials=True)
+CORS(app, origins=['*'], supports_credentials=True)
 
-GEMINI_API_KEY = 'AIzaSyDrYXOmHqiChayrg_yC0i-aGi-OqeJw1v4'
+GEMINI_API_KEY = os.getenv('GEMINI_API_KEY', 'AIzaSyDrYXOmHqiChayrg_yC0i-aGi-OqeJw1v4')
 GEMINI_URL = f'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}'
+
+@app.route('/api/health', methods=['GET'])
+def health_check():
+    return jsonify({'status': 'healthy', 'service': 'ML Features API'})
 
 @app.route('/api/disease-detection', methods=['POST'])
 def disease_detection():
@@ -135,50 +138,41 @@ Make it practical for Indian farmers with locally available products and exact d
     except Exception as e:
         return jsonify({'success': False, 'error': str(e)})
 
-@app.route('/api/schemes', methods=['GET'])
-def get_schemes():
+@app.route('/api/chat', methods=['POST'])
+def chat():
     try:
-        with sync_playwright() as p:
-            browser = p.chromium.launch(headless=True)
-            page = browser.new_page()
-            
-            schemes = []
-            
-            page.goto('https://www.myscheme.gov.in/search?q=farmer', wait_until='networkidle')
-            page.wait_for_timeout(2000)
-            
-            links = page.query_selector_all('a')
-            for link in links:
-                try:
-                    text = link.inner_text().strip()
-                    href = link.get_attribute('href')
-                    
-                    if (len(text) > 10 and len(text) < 150 and 
-                        any(keyword in text.lower() for keyword in ['farmer', 'kisan', 'krishi', 'agriculture', 'fasal', 'scheme', 'yojana'])):
-                        
-                        full_link = href if href and href.startswith('http') else f"https://www.myscheme.gov.in{href or ''}"
-                        
-                        schemes.append({
-                            'title': text,
-                            'description': 'Government scheme for farmers and agriculture',
-                            'link': full_link
-                        })
-                except:
-                    continue
-            
-            browser.close()
-            
-            seen = set()
-            unique_schemes = []
-            for scheme in schemes:
-                if scheme['title'] not in seen and len(scheme['title']) > 5:
-                    seen.add(scheme['title'])
-                    unique_schemes.append(scheme)
-            
-            return jsonify({'schemes': unique_schemes[:20]})
+        data = request.get_json()
+        message = data.get('message', '')
         
+        payload = {
+            "contents": [{
+                "parts": [{
+                    "text": f"""You are an expert agricultural advisor for Indian farmers. Answer this farming question: {message}
+
+Provide practical, actionable advice specific to Indian agriculture including:
+- Specific crop varieties suitable for India
+- Local fertilizers and pesticides available in India
+- Seasonal considerations for Indian climate
+- Cost-effective solutions for small farmers
+- Government schemes if relevant
+
+Keep the response helpful and under 300 words."""
+                }]
+            }]
+        }
+        
+        response = requests.post(GEMINI_URL, headers={'Content-Type': 'application/json'}, json=payload)
+        result = response.json()
+        
+        if 'candidates' in result and result['candidates']:
+            ai_response = result['candidates'][0]['content']['parts'][0]['text']
+            return jsonify({'success': True, 'response': ai_response})
+        
+        return jsonify({'success': False, 'error': 'Unable to get response'})
+            
     except Exception as e:
-        return jsonify({'error': f'Failed to fetch live data: {str(e)}'}), 500
+        return jsonify({'success': False, 'error': str(e)})
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5002, debug=True)
+    port = int(os.environ.get('PORT', 5002))
+    app.run(host='0.0.0.0', port=port, debug=False)
