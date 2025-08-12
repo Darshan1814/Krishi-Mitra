@@ -1,0 +1,57 @@
+services:
+  # Frontend Service
+  - type: web
+    name: krishimitra-frontend
+    env: node
+    buildCommand: cd frontend && npm install && npm run build
+    startCommand: cd frontend && npx serve -s build -l 3000
+    envVars:
+      - key: REACT_APP_API_URL
+        value: https://krishimitra-backend.onrender.com/api
+      - key: REACT_APP_AUTH_API_URL
+        value: https://krishimitra-auth.onrender.com/api
+      - key: REACT_APP_ML_API_URL
+        value: https://krishimitra-ml.onrender.com/api
+
+  # Main Backend Service
+  - type: web
+    name: krishimitra-backend
+    env: node
+    buildCommand: cd backend/main && npm install
+    startCommand: cd backend/main && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5001
+      - key: MONGODB_URI
+        fromDatabase:
+          name: krishimitra-db
+          property: connectionString
+
+  # Auth Backend Service
+  - type: web
+    name: krishimitra-auth
+    env: node
+    buildCommand: cd backend/auth && npm install
+    startCommand: cd backend/auth && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+
+  # ML Service
+  - type: web
+    name: krishimitra-ml
+    env: python
+    buildCommand: cd backend/ml-features && pip install -r requirements.txt
+    startCommand: cd backend/ml-features && python app.py
+    envVars:
+      - key: PORT
+        value: 5002
+
+databases:
+  - name: krishimitra-db
+    databaseName: krishimitra
+    user: krishimitra
